@@ -49,6 +49,7 @@ You can check the example project in this repository, download the project then 
 ReceetPOS.shared.isEnabled = true // to turn it on
 ```
 2- an alert will pop up asking you to enter your Authorization code. To obtain your authorization code contact hello@getreceet.com
+
 3- you are ready to send digital receipts.
 
 ## Step-by-step guide to send digital orders
