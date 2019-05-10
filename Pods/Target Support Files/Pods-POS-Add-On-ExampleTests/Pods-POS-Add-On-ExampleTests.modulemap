@@ -1,0 +1,6 @@
+framework module Pods_POS_Add_On_ExampleTests {
+  umbrella header "Pods-POS-Add-On-ExampleTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

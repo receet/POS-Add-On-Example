@@ -1,0 +1,6 @@
+framework module Pods_POS_Add_On_Example {
+  umbrella header "Pods-POS-Add-On-Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
