@@ -34,11 +34,22 @@ if let posID = ReceetPOS.shared.posID {
         }
 beaconIDLabel.text = ReceetPOS.shared.virtualBeaconID
 ```
-
+You can reset your Authorization Code by using the public method of ReceetPOS 'enterAuthCode' like this
+```swift
+ReceetPOS.shared.enterAuthCode()
+```
 You can always check the status of Receet Point of Sale manager using 'isEnabled' flag
 
 ## Example Project
 You can check the example project in this repository, download the project then run pod install from the project's directory.
+
+## Step-by-step guide to turn on Receet Point of Sale integration
+1- you turn on the integration by setting the 'isEnabled' flag 
+```swift
+ReceetPOS.shared.isEnabled = true // to turn it on
+```
+2- an alert will pop up asking you to enter your Authorization code. To obtain your authorization code contact hello@getreceet.com
+3- you are ready to send digital receipts.
 
 ## Step-by-step guide to send digital orders
 To send a digital receipt you prepare the purchase order as the following format, you can add any supported fields you want. Check the supported fields in the tables below:
