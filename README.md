@@ -300,7 +300,3 @@ The following currencies are supported in Receet system, send the symbol of the 
 ## Authors
 
 * **Amjad Khalil** - *Initial work* - [Receet](https://github.com/receet)
-
-## License
-
-This project is licensed under the MIT License - see the (LICENSE) file for details
