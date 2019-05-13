@@ -5,7 +5,7 @@ target 'POS-Add-On-Example' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   
-	pod 'ReceetPOSAddOn'
+   pod 'ReceetPOSAddOn'
   # Pods for POS-Add-On-Example
 
   target 'POS-Add-On-ExampleTests' do
