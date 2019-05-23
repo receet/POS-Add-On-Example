@@ -22,11 +22,15 @@ First thing is to import the framework. See the Installation instructions on how
 ```swift
 import ReceetPOSAddOn
 ```
-You can turn on or turn off the integration by setting the 'isEnabled' flag 
+You can turn on or turn off the integration by calling the following methods
 
 ```swift
-ReceetPOS.shared.isEnabled = true // to turn it on
+ReceetPOS.shared.turnOn(authCode: "Add Your authorization code here")// to turn it on 
+ReceetPOS.shared.turnOff()// to turn it off
 ```
+
+You can always check the status of Receet Point of Sale manager using 'isEnabled' flag
+
 You can get Point of Sale Id and virtual beacon Id using 'posID' and 'virtualBeaconID' from the shared instance of ReceetPOS class
 ```swift
 if let posID = ReceetPOS.shared.posID {
@@ -34,22 +38,20 @@ if let posID = ReceetPOS.shared.posID {
         }
 beaconIDLabel.text = ReceetPOS.shared.virtualBeaconID
 ```
-You can reset your Authorization Code by using the public method of ReceetPOS 'enterAuthCode' like this
+You can reset your Authorization Code by using the method of ReceetPOS 'enterAuthCode' like this
 ```swift
-ReceetPOS.shared.enterAuthCode()
+ReceetPOS.shared.resetAuthCode(authCode: "Add Your authorization code here")
 ```
-You can always check the status of Receet Point of Sale manager using 'isEnabled' flag
-
 ## Example Project
 You can check the example project in this repository, download the project then run pod install from the project's directory.
 
 ## Step-by-step guide to turn on Receet Point of Sale integration
-1- you turn on the integration by setting the 'isEnabled' flag 
-```swift
-ReceetPOS.shared.isEnabled = true // to turn it on
-```
-2- an alert will pop up asking you to enter your Authorization code. To obtain your authorization code contact hello@getreceet.com
+1- to obtain your authorization code contact hello@getreceet.com
 
+2- you turn on the integration by calling the following method
+```swift
+ReceetPOS.shared.turnOn(authCode: "Add Your authorization code here")// to turn it on
+```
 3- you are ready to send digital receipts.
 
 ## Step-by-step guide to send digital orders
