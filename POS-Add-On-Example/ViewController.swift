@@ -26,53 +26,46 @@ class ViewController: UIViewController {
         resetAuthCodeButton.isEnabled = sender.isOn
         resetAuthCodeButton.alpha = sender.isOn ? 1.0 : 0.5
         
-        ReceetPOS.shared.isEnabled = sender.isOn
+        if sender.isOn {
+            ReceetPOS.shared.turnOn(authCode: <#T##String#>)
+        }else {
+            ReceetPOS.shared.turnOff()
+        }
     }
     @IBAction func resetAuthCodeButtonSwitched(_ sender: UIButton) { //reset authorization code
-        ReceetPOS.shared.enterAuthCode()
+        ReceetPOS.shared.resetAuthCode(authCode: <#T##String#>) // you can always reset auth code to make sure that the POS has the latest code
     }
     
     @IBAction func sendDigitalOrderButtonPressed(_ sender: Any) {
         // order details and items, the order must be a dictionary with the following format
         let orderDetails : [String:Any] = [
             "externalId" : "T004-126572",
-            "subTotalProduct": 1449.0,
-            "totalProduct" : 1383.0,
-            "order_product_subtotal" : 1383.0,
+            "subTotalProduct": 634.52,
+            "totalProduct" : 634.52,
+            "order_product_subtotal" : 634.52,
             "totalTax" : 0.00,
             "totalShipping" : 0.00,
             "totalTaxShipping" : 0.00,
-            "totalAdjustment" : 66.00,
-            "description" : "Test",
+            "totalAdjustment" : 0.00,
+            "description" : "Mobile transaction",
             "currency" : "NIS",
-            "createdBy" : "safaa",
+            "createdBy" : "Omar",
             "buttomTextArea":"totalPoint:500,receiptPoint:5"
         ]
         
         let orderItems : [[String:Any]] = [
             [
-                "price" : 1320.00,
-                "description": "Breville Toaster Oven BOV650",
+                "price" : 634.52,
+                "description": "Deco Wi-Fi System",
                 "quantity" : 1,
-                "totalProduct" : 1254.00,
-                "taxAmount" : 5.00,
-                "shipCharg" : 1.00,
+                "totalProduct" : 634.52,
+                "taxAmount" : 0.00,
+                "shipCharg" : 0.00,
                 "adjustmentDescription":"5% Discount",
-                "shipTaxAmount" : 1.00,
-                "totalAdjustment" : 66.00,
+                "shipTaxAmount" : 0.00,
+                "totalAdjustment" : 0.00,
                 "itemNumber":"17172",
             ],
-            [
-                "price" : 129,
-                "description": "Midea Electric Kettle MD-K1720W White",
-                "quantity" : 1,
-                "totalProduct" : 129.00,
-                "taxAmount" : 5.00,
-                "shipCharg" : 1.00,
-                "shipTaxAmount" : 1.00,
-                "totalAdjustment" : 1.00,
-                "itemNumber":"18450",
-            ]
         ]
         
         let order : [String:Any] = [
