@@ -1,0 +1,11 @@
+framework module ReceetPOSAddOn {
+  umbrella header "ReceetPOSAddOn.h"
+
+  export *
+  module * { export * }
+}
+
+module ReceetPOSAddOn.Swift {
+    header "ReceetPOSAddOn-Swift.h"
+    requires objc
+}

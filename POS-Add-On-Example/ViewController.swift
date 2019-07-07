@@ -27,13 +27,13 @@ class ViewController: UIViewController {
         resetAuthCodeButton.alpha = sender.isOn ? 1.0 : 0.5
         
         if sender.isOn {
-            ReceetPOS.shared.turnOn(authCode: <#T##String#>)
+            ReceetPOS.shared.turnOn(authCode: "D0698EDD-8400-4BBF-AC77-D6B92ECBC7FC")
         }else {
             ReceetPOS.shared.turnOff()
         }
     }
     @IBAction func resetAuthCodeButtonSwitched(_ sender: UIButton) { //reset authorization code
-        ReceetPOS.shared.resetAuthCode(authCode: <#T##String#>) // you can always reset auth code to make sure that the POS has the latest code
+        ReceetPOS.shared.resetAuthCode(authCode: "D0698EDD-8400-4BBF-AC77-D6B92ECBC7FC") // you can always reset auth code to make sure that the POS has the latest code
     }
     
     @IBAction func sendDigitalOrderButtonPressed(_ sender: Any) {

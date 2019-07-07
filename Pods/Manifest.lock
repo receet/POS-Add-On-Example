@@ -1,3 +1,28 @@
-PODFILE CHECKSUM: 8afb0dd6d7558a29d52e9f4a2d6f4ce1b24ae247
+PODS:
+  - lottie-ios (3.1.0)
+  - ReachabilitySwift (4.3.1)
+  - ReceetPOSAddOn (0.0.7):
+    - lottie-ios
+    - ReachabilitySwift
+    - Starscream
+  - Starscream (3.1.0)
 
-COCOAPODS: 1.7.0.beta.3
+DEPENDENCIES:
+  - ReceetPOSAddOn
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - lottie-ios
+    - ReachabilitySwift
+    - ReceetPOSAddOn
+    - Starscream
+
+SPEC CHECKSUMS:
+  lottie-ios: 9467723922dfff46f6d4e3019c32594a62440b7c
+  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
+  ReceetPOSAddOn: 1be9da31f39ae8b846480417ae555eeb2fa13bf9
+  Starscream: 08172b481e145289c4930cb567230fb55897cfa4
+
+PODFILE CHECKSUM: 7dd18145e3ec38b2e8e8b01a817f86093173aa8e
+
+COCOAPODS: 1.7.2
