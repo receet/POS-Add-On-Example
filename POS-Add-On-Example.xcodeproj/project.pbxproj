@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3DF339C622C26D5800A6B360 /* ReceetPOSAddOn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF339C522C26D5800A6B360 /* ReceetPOSAddOn.framework */; };
-		3DF339C722C26D5800A6B360 /* ReceetPOSAddOn.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF339C522C26D5800A6B360 /* ReceetPOSAddOn.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		951875992278069200288B4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951875982278069200288B4F /* AppDelegate.swift */; };
 		9518759B2278069200288B4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518759A2278069200288B4F /* ViewController.swift */; };
 		9518759E2278069200288B4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9518759C2278069200288B4F /* Main.storyboard */; };
@@ -38,25 +36,9 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		3DF339C822C26D5800A6B360 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				3DF339C722C26D5800A6B360 /* ReceetPOSAddOn.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		06F1301591CE16E5BD369335 /* Pods_POS_Add_On_ExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POS_Add_On_ExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1536A3AA51727FDA95679B15 /* Pods-POS-Add-On-ExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POS-Add-On-ExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-POS-Add-On-ExampleUITests/Pods-POS-Add-On-ExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
-		3DF339C222C26C8C00A6B360 /* ReceetPOSAddOn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReceetPOSAddOn.framework; sourceTree = "<group>"; };
-		3DF339C522C26D5800A6B360 /* ReceetPOSAddOn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReceetPOSAddOn.framework; path = "../../../Library/Developer/Xcode/DerivedData/ReceetPOSAddOn-bncfzkaajmyutfachlfhwggjupkx/Build/Products/Debug-iphoneos/ReceetPOSAddOn.framework"; sourceTree = "<group>"; };
 		69CBA0126474C7F5F1360A3A /* Pods-POS-Add-On-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POS-Add-On-Example.debug.xcconfig"; path = "Target Support Files/Pods-POS-Add-On-Example/Pods-POS-Add-On-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7682EFCA7215D99034097013 /* Pods-POS-Add-On-ExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POS-Add-On-ExampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-POS-Add-On-ExampleUITests/Pods-POS-Add-On-ExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8DCE1271EC26AA444C912EDE /* Pods_POS_Add_On_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POS_Add_On_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,7 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DF339C622C26D5800A6B360 /* ReceetPOSAddOn.framework in Frameworks */,
 				CA8FCE6EE9C6090BC1A5BE6F /* Pods_POS_Add_On_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,8 +115,6 @@
 		9518758C2278069200288B4F = {
 			isa = PBXGroup;
 			children = (
-				3DF339C222C26C8C00A6B360 /* ReceetPOSAddOn.framework */,
-				3DF339C522C26D5800A6B360 /* ReceetPOSAddOn.framework */,
 				951875972278069200288B4F /* POS-Add-On-Example */,
 				951875AC2278069300288B4F /* POS-Add-On-ExampleTests */,
 				951875B72278069300288B4F /* POS-Add-On-ExampleUITests */,
@@ -197,8 +176,6 @@
 				951875912278069200288B4F /* Sources */,
 				951875922278069200288B4F /* Frameworks */,
 				951875932278069200288B4F /* Resources */,
-				D7DFA21798C4769BBAC64FAC /* [CP] Embed Pods Frameworks */,
-				3DF339C822C26D5800A6B360 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -382,23 +359,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D7DFA21798C4769BBAC64FAC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-POS-Add-On-Example/Pods-POS-Add-On-Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-POS-Add-On-Example/Pods-POS-Add-On-Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-POS-Add-On-Example/Pods-POS-Add-On-Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
